@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories Together 💕</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Patrick Hand', cursive;
+      background: #fff0f5; /* soft pink */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin: 30px 0 20px 0;
+      font-size: 2.5em;
+      color: #ff69b4;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 40px; /* space between rows */
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .gallery-row {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start; /* default left */
+    }
+
+    /* Zig-zag: every even row align right */
+    .gallery-row:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    .gallery-row img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery-row img:hover {
+      transform: scale(1.05) rotate(-1deg);
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-row {
+        justify-content: center;
+      }
+
+      .gallery-row img {
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-row img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Memories Together 💕</h1>
+
+  <div class="gallery">
+    <div class="gallery-row">
+      <img src="images/galleryimage1.jpeg" alt="Memory 1">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage2.jpeg" alt="Memory 2">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage3.jpeg" alt="Memory 3">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage4.jpeg" alt="Memory 4">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage5.jpeg" alt="Memory 5">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage6.jpeg" alt="Memory 6">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage7.jpeg" alt="Memory 7">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage8.jpeg" alt="Memory 8">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage9.jpeg" alt="Memory 9">
+    </div>
+    <div class="gallery-row">
+      <img src="images/galleryimage10.jpeg" alt="Memory 10">
+    </div>
+  </div>
+
+</body>
+</html>

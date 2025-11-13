@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter for My Love</title>
+
+  <!-- Google Handwriting Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Patrick Hand', cursive;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      /* Background image (behind wooden table) */
+      background: url('images/istockphoto-697902984-612x612.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Wooden table overlay */
+    .table-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/wooden-table.jpg') no-repeat center center;
+      background-size: cover;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.9; /* slightly see-through to show background */
+    }
+
+    .paper {
+      position: relative;
+      z-index: 2;
+      width: 80%;
+      max-width: 800px;
+      height: 80%;
+      background-color: #fffbe6;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      overflow-y: auto;
+      line-height: 1.6;
+      font-size: 1.3em;
+      transform: rotate(-2deg); /* slight tilt for realism */
+    }
+
+    .paper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px dashed #e0d7c6;
+      border-radius: 10px;
+      pointer-events: none;
+    }
+
+    .paper-texture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/paper-texture.png') repeat;
+      opacity: 0.2;
+      pointer-events: none;
+      border-radius: 10px;
+    }
+
+    /* Optional: subtle animation on load */
+    .paper.animate {
+      animation: floatIn 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes floatIn {
+      0% {
+        transform: translateY(-30px) rotate(-2deg);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0) rotate(-2deg);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Wooden table layer -->
+  <div class="table-layer"></div>
+
+  <!-- Paper -->
+  <div class="paper animate">
+    <div class="paper-texture"></div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet eros a lectus malesuada hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed vehicula, purus at facilisis tincidunt, risus est blandit nisl, nec sollicitudin purus leo in odio. Etiam vitae volutpat mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    </p>
+    <p>
+      Nullam non sapien at metus fermentum aliquet. Sed vitae magna nec nisl convallis congue. Quisque sed lacinia nulla. Praesent id dui vitae purus ultricies lacinia. Donec nec dapibus est. Vestibulum viverra, sapien vel porttitor luctus, sapien libero tincidunt nulla, a pulvinar justo arcu a neque.
+    </p>
+  </div>
+
+</body>
+</html>
